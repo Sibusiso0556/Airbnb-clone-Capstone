@@ -1,0 +1,74 @@
+.host-dashboard {
+  padding: 24px 0 60px;
+}
+
+.host-dashboard__topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 20px;
+}
+
+.host-dashboard__logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-brand);
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.host-dashboard__user {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.host-dashboard__nav {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.host-dashboard__nav .btn {
+  border-radius: var(--radius-pill);
+  font-size: 13px;
+  padding: 10px 18px;
+}
+
+.host-dashboard__nav--active {
+  background: var(--color-text);
+  color: #fff;
+  border-color: var(--color-text);
+  display: inline-block;
+}
+
+.host-dashboard h2 {
+  font-size: 15px;
+  color: var(--color-text-secondary);
+  margin-bottom: 8px;
+}
+
+.host-dashboard__status {
+  color: var(--color-text-secondary);
+  padding: 40px 0;
+}
+
+.host-dashboard__status--error {
+  color: var(--color-brand);
+}
+
+.host-dashboard__empty {
+  padding: 60px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.host-dashboard__list {
+  display: flex;
+  flex-direction: column;
+}

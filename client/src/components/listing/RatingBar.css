@@ -1,0 +1,28 @@
+.rating-bar {
+  display: grid;
+  grid-template-columns: 100px 1fr 28px;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+}
+
+.rating-bar__label {
+  color: var(--color-text);
+}
+
+.rating-bar__track {
+  height: 4px;
+  background: var(--color-border);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+}
+
+.rating-bar__fill {
+  height: 100%;
+  background: var(--color-text);
+}
+
+.rating-bar__score {
+  color: var(--color-text-secondary);
+  text-align: right;
+}

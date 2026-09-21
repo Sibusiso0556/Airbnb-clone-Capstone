@@ -1,0 +1,119 @@
+.booking-card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: sticky;
+  top: 100px;
+}
+
+.booking-card__price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 15px;
+}
+
+.booking-card__price-row strong {
+  font-size: 20px;
+}
+
+.booking-card__rating {
+  font-size: 13px;
+}
+
+.booking-card__dates {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.booking-card__dates label {
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-right: 1px solid var(--color-border);
+}
+
+.booking-card__dates label:last-child {
+  border-right: none;
+}
+
+.booking-card__guests {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+}
+
+.booking-card__dates span:first-child,
+.booking-card__guests span:first-child {
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.booking-card__dates input,
+.booking-card__guests select {
+  border: none;
+  outline: none;
+  font-size: 13px;
+}
+
+.booking-card__note {
+  text-align: center;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.booking-card__error {
+  color: var(--color-brand);
+  font-size: 13px;
+  margin: 0;
+  text-align: center;
+}
+
+.booking-card__success {
+  color: var(--color-success);
+  font-size: 13px;
+  margin: 0;
+  text-align: center;
+}
+
+.booking-card__breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border);
+  font-size: 14px;
+}
+
+.booking-card__breakdown > div {
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-text-secondary);
+}
+
+.booking-card__total {
+  font-weight: 700;
+  color: var(--color-text) !important;
+  border-top: 1px solid var(--color-border);
+  padding-top: 12px;
+}
+
+.booking-card__total span {
+  color: var(--color-text);
+}
+
+.booking-card__discount span:last-child {
+  color: var(--color-success);
+}

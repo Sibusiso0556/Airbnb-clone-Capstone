@@ -1,0 +1,238 @@
+.hero {
+  position: relative;
+  height: 480px;
+  overflow: hidden;
+}
+
+.hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(0,0,0,0.05), rgba(0,0,0,0.25));
+}
+
+.hero__content h1 {
+  color: #fff;
+  font-size: 40px;
+  margin: 0;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.35);
+}
+
+.hero__cta {
+  background: #fff;
+  color: var(--color-text);
+  border-radius: var(--radius-pill);
+  padding: 14px 28px;
+}
+
+.homepage__toolbar {
+  background: #000;
+  padding: 20px 0 28px;
+}
+
+.homepage__search {
+  display: flex;
+  justify-content: center;
+}
+
+.homepage__section {
+  margin: 56px auto;
+}
+
+.homepage__section h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.homepage__status {
+  color: var(--color-text-secondary);
+}
+
+.homepage__status--error {
+  color: var(--color-brand);
+}
+
+.homepage__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px 20px;
+}
+
+.homepage__cities {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.homepage__experiences {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.homepage__experience {
+  aspect-ratio: 16 / 10;
+  border-radius: var(--radius-md);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 24px;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.homepage__experience .btn-outline {
+  align-self: flex-start;
+  background: #fff;
+  border-color: #fff;
+  color: var(--color-text);
+  width: fit-content;
+}
+
+@media (max-width: 1100px) {
+  .homepage__grid, .homepage__cities {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .homepage__experiences {
+    grid-template-columns: 1fr;
+  }
+}
+
+.homepage__giftcards {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.homepage__giftcards-text h2 {
+  margin-bottom: 16px;
+}
+
+.homepage__giftcards-fan {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+.giftcard {
+  width: 150px;
+  height: 96px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  background-size: cover;
+  background-position: center;
+}
+
+.giftcard--1 {
+  transform: rotate(-8deg);
+  margin-right: -34px;
+  z-index: 1;
+}
+
+.giftcard--2 {
+  background-color: var(--color-brand);
+  z-index: 2;
+}
+
+.giftcard__logo {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+.giftcard--3 {
+  transform: rotate(8deg);
+  margin-left: -34px;
+  z-index: 1;
+}
+
+.homepage__host-banner {
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  padding: 0 !important;
+}
+
+.homepage__host-banner-overlay {
+  background: linear-gradient(180deg, rgba(0,0,0,0.15), rgba(0,0,0,0.55));
+  padding: 48px;
+  color: #fff;
+}
+
+.homepage__host-banner-overlay h2 {
+  font-size: 30px;
+  margin-bottom: 16px;
+}
+
+.homepage__getaways-tabs {
+  display: flex;
+  gap: 28px;
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 24px;
+  overflow-x: auto;
+}
+
+.homepage__getaways-tab {
+  border: none;
+  background: none;
+  padding: 0 0 14px;
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+}
+
+.homepage__getaways-tab--active {
+  color: var(--color-text);
+  font-weight: 600;
+  border-bottom-color: var(--color-text);
+}
+
+.homepage__getaways-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px 32px;
+}
+
+.homepage__getaway-name {
+  font-weight: 600;
+  margin: 0;
+  font-size: 14px;
+}
+
+.homepage__getaway-place {
+  color: var(--color-text-secondary);
+  margin: 2px 0 0;
+  font-size: 13px;
+}
+
+@media (max-width: 900px) {
+  .homepage__giftcards {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .homepage__getaways-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

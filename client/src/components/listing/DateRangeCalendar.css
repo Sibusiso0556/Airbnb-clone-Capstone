@@ -1,0 +1,95 @@
+.date-calendar {
+  max-width: 620px;
+}
+
+.date-calendar__header {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.date-calendar__nav {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: #fff;
+  font-size: 16px;
+}
+
+.date-calendar__nav:hover {
+  background: var(--color-bg-muted);
+}
+
+.date-calendar__months {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.date-calendar__month-label {
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  margin: 0 0 12px;
+}
+
+.date-calendar__weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-size: 11px;
+  color: var(--color-text-secondary);
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.date-calendar__grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+
+.date-calendar__day {
+  aspect-ratio: 1;
+  border: none;
+  background: none;
+  border-radius: 50%;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.date-calendar__day:hover:not(:disabled) {
+  background: var(--color-bg-muted);
+}
+
+.date-calendar__day:disabled {
+  color: var(--color-border);
+  cursor: default;
+}
+
+.date-calendar__day.range-start,
+.date-calendar__day.range-end {
+  background: var(--color-text);
+  color: #fff;
+}
+
+.date-calendar__day.in-range {
+  background: var(--color-bg-muted);
+  border-radius: 0;
+}
+
+.date-calendar__clear {
+  border: none;
+  background: none;
+  text-decoration: underline;
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+@media (max-width: 700px) {
+  .date-calendar__months {
+    grid-template-columns: 1fr;
+  }
+}

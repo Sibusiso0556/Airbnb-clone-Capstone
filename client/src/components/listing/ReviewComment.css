@@ -1,0 +1,45 @@
+.review-comment {
+  padding: 4px 0;
+}
+
+.review-comment__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.review-comment__avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.review-comment__name {
+  font-weight: 600;
+  margin: 0;
+  font-size: 14px;
+}
+
+.review-comment__date {
+  color: var(--color-text-secondary);
+  margin: 0;
+  font-size: 13px;
+}
+
+.review-comment__text {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.review-comment__more {
+  border: none;
+  background: none;
+  padding: 0;
+  margin-top: 4px;
+  font-weight: 600;
+  font-size: 13px;
+  text-decoration: underline;
+}

@@ -1,0 +1,29 @@
+.city-card {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  position: relative;
+}
+
+.city-card__image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.city-card__overlay {
+  padding: 14px;
+  color: #fff;
+}
+
+.city-card__title {
+  font-weight: 700;
+  font-size: 15px;
+  margin: 0;
+}
+
+.city-card__distance {
+  font-size: 12px;
+  margin: 2px 0 0;
+  opacity: 0.9;
+}
