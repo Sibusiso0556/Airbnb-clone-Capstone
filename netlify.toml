@@ -1,0 +1,12 @@
+[build]
+  base = "client"
+  command = "npm run build"
+  publish = "dist"
+
+# Client-side routing (React Router) — without this, refreshing any page
+# other than "/" (e.g. /listing/123) would 404, since Netlify would look
+# for a real file at that path instead of letting the React app handle it.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
