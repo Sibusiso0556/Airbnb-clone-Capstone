@@ -53,7 +53,10 @@ export default function Footer() {
         ))}
       </div>
       <div className="container footer__bottom">
-        <span>© {new Date().getFullYear()} Airbnb, Inc. · Privacy · Terms · Sitemap</span>
+        <span>
+          © {new Date().getFullYear()} Vacation Stays · A student capstone project (Zaio Institute) — not affiliated with
+          or endorsed by Airbnb, Inc. · Built for educational purposes only.
+        </span>
         <span className="footer__meta">🌐 English (US) · $ USD</span>
       </div>
     </footer>
