@@ -27,7 +27,11 @@ app.get('/api/health', (req, res) => res.json({ status: 'ok' }));
 if (process.env.NODE_ENV === 'production') {
   const clientDist = path.join(__dirname, '..', 'client', 'dist');
   app.use(express.static(clientDist));
-  app.get('*', (req, res) => {
+  // Express 5 (path-to-regexp v6+) no longer accepts a bare '*' wildcard —
+  // it throws at startup instead of matching routes. '/*splat' is the
+  // Express 5 equivalent: match any path and serve the SPA shell so
+  // client-side routing (React Router) can take over.
+  app.get('/*splat', (req, res) => {
     res.sendFile(path.join(clientDist, 'index.html'));
   });
 } else {
